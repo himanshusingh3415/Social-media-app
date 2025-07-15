@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Social Media App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile-page">
+    <header>
+        <h1>My Profile</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <section class="profile-edit">
+            <h2>Edit Profile</h2>
+            <form id="profileForm">
+                <label>Profile Photo:</label>
+                <input type="file" id="profilePhotoInput" accept="image/*">
+                <img id="profilePhotoPreview" src="" alt="Profile Photo" style="display:none; width:100px; height:100px; border-radius:50%;">
+                <label>Username:</label>
+                <input type="text" id="editUsername" required>
+                <button type="submit">Save</button>
+            </form>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
