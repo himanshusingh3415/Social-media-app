@@ -1,81 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Social Media Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
-      margin: 0;
-      padding: 0;
-    }
-    .profile-header {
-      background-color: #fff;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .profile-header img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-    }
-    .profile-header h1 {
-      margin: 10px 0 5px;
-    }
-    .nav {
-      display: flex;
-      justify-content: center;
-      background: #fff;
-      padding: 10px;
-      gap: 15px;
-    }
-    .nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    .content {
-      padding: 20px;
-      max-width: 600px;
-      margin: auto;
-    }
-    .post {
-      background: #fff;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    .post p {
-      margin: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-  <div class="profile-header">
-    <img src="https://via.placeholder.com/100" alt="Profile Picture">
-    <h1>John Doe</h1>
-    <p>@john_doe</p>
-  </div>
-
-  <div class="nav">
-    <a href="#">Home</a>
-    <a href="#">Posts</a>
-    <a href="#">Friends</a>
-    <a href="#">Messages</a>
-  </div>
-
-  <div class="content">
-    <div class="post">
-      <p><strong>John Doe:</strong> Just had a great day at the park! 🌞</p>
-    </div>
-    <div class="post">
-      <p><strong>John Doe:</strong> Loving the new social media layout design!</p>
-    </div>
-  </div>
-
+<body class="main-page">
+    <header>
+        <h1>MySocial</h1>
+        <nav>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+    <main>
+        <section class="friends">
+            <h2>Friends</h2>
+            <div id="friendRequests"></div>
+        </section>
+        <section class="messages">
+            <h2>Messages</h2>
+            <div id="messageBox"></div>
+        </section>
+        <section class="feed">
+            <h2>Photo Feed</h2>
+            <form id="uploadForm">
+                <input type="file" id="photoInput" accept="image/*">
+                <button type="submit">Upload Photo</button>
+            </form>
+            <div id="photoFeed"></div>
+        </section>
+    </main>
+    <script src="app.js"></script>
 </body>
 </html>
